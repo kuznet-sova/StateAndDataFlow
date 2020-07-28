@@ -27,7 +27,7 @@ struct RegisterView: View {
                 Text("\(nameCount)")
                     .frame(width: 30, height: 30)
                     .font(.headline)
-//                    .foregroundColor()
+                    .foregroundColor( nameCount < 3 ? .red : .green )
             }
             
             Button(action: registerUser) {
@@ -39,6 +39,7 @@ struct RegisterView: View {
                     Text("Ok")
                         .frame(width: 30, height: 30)
                         .font(.headline)
+                        .disabled( nameCount < 3 ? true : false )
                 }
             }
         }
@@ -51,19 +52,6 @@ extension RegisterView {
         if !name.isEmpty {
             user.name = name
             user.isRegister = true
-        }
-    }
-    
-    private func nameValidation() {
-        var nameCountColor: Color
-        var loginAction: Bool
-        
-        if nameCount < 3 {
-            nameCountColor = .red
-            loginAction = false
-        } else {
-            nameCountColor = .green
-            loginAction = true
         }
     }
 }
