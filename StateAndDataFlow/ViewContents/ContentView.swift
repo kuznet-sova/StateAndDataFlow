@@ -26,6 +26,8 @@ struct ContentView: View {
                 ButtonView(timer: timer)
             }
             Spacer()
+            
+            ButtonLogout()
         }
     }
 }
@@ -50,6 +52,27 @@ struct ButtonView: View {
             }
             .frame(width: 200, height: 60)
             .background(Color.red)
+            .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .stroke(Color.black, lineWidth: 4)
+            )
+        }
+    }
+}
+
+struct ButtonLogout: View {
+    
+    var body: some View {
+        VStack {
+            Button(action: {  }) {
+                Text("LogOut")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+            }
+            .frame(width: 200, height: 60)
+            .background(Color.blue)
             .cornerRadius(20)
             .overlay(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
