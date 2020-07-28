@@ -39,8 +39,8 @@ struct RegisterView: View {
                     Text("Ok")
                         .frame(width: 30, height: 30)
                         .font(.headline)
-                        .disabled( nameCount < 3 ? true : false )
                 }
+                .disabled( nameCount < 3 ? true : false )
             }
         }
         .padding()
