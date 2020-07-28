@@ -12,12 +12,21 @@ struct RegisterView: View {
     @State private var name = ""
     @EnvironmentObject var user: UserManager
     
+    private var nameValidation: Int {
+        name.count
+    }
+    
     var body: some View {
         VStack {
-            TextField("Enter your name...", text: $name)
-                .multilineTextAlignment(.center)
-                .frame(width: 200, height: 50)
-                .font(.headline)
+            HStack {
+                TextField("Enter your name...", text: $name)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 200, height: 50)
+                    .font(.headline)
+                Text("\(nameValidation)")
+                    .frame(width: 30, height: 30)
+                    .font(.headline)
+            }
             
             Button(action: registerUser) {
                 HStack {
