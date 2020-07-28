@@ -45,6 +45,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CA10D8424D046F70024EE54 /* ViewContents */ = {
+			isa = PBXGroup;
+			children = (
+				A845606A24CF47B7005EF569 /* ContentView.swift */,
+				A845607C24CF556A005EF569 /* RegisterView.swift */,
+				A845608024CF5945005EF569 /* StarterView.swift */,
+			);
+			path = ViewContents;
+			sourceTree = "<group>";
+		};
+		8CA10D8524D047140024EE54 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A845607124CF47BA005EF569 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8CA10D8624D047280024EE54 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				A845606C24CF47BA005EF569 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
+		8CA10D8724D047470024EE54 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A845607A24CF4F58005EF569 /* TimeCounter.swift */,
+				A845607E24CF56C7005EF569 /* UserManager.swift */,
+				A845606624CF47B7005EF569 /* AppDelegate.swift */,
+				A845606824CF47B7005EF569 /* SceneDelegate.swift */,
+				A845607424CF47BA005EF569 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		A845605A24CF47B7005EF569 = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +102,10 @@
 		A845606524CF47B7005EF569 /* StateAndDataFlow */ = {
 			isa = PBXGroup;
 			children = (
-				A845606624CF47B7005EF569 /* AppDelegate.swift */,
-				A845606824CF47B7005EF569 /* SceneDelegate.swift */,
-				A845606A24CF47B7005EF569 /* ContentView.swift */,
-				A845607A24CF4F58005EF569 /* TimeCounter.swift */,
-				A845607C24CF556A005EF569 /* RegisterView.swift */,
-				A845608024CF5945005EF569 /* StarterView.swift */,
-				A845607E24CF56C7005EF569 /* UserManager.swift */,
-				A845606C24CF47BA005EF569 /* Assets.xcassets */,
-				A845607124CF47BA005EF569 /* LaunchScreen.storyboard */,
-				A845607424CF47BA005EF569 /* Info.plist */,
+				8CA10D8424D046F70024EE54 /* ViewContents */,
+				8CA10D8524D047140024EE54 /* Storyboards */,
+				8CA10D8624D047280024EE54 /* Sourse */,
+				8CA10D8724D047470024EE54 /* SupportingFiles */,
 				A845606E24CF47BA005EF569 /* Preview Content */,
 			);
 			path = StateAndDataFlow;
@@ -305,7 +337,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"StateAndDataFlow/Preview Content\"";
 				DEVELOPMENT_TEAM = G39AAW7HHA;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = StateAndDataFlow/Info.plist;
+				INFOPLIST_FILE = StateAndDataFlow/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -328,7 +360,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"StateAndDataFlow/Preview Content\"";
 				DEVELOPMENT_TEAM = G39AAW7HHA;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = StateAndDataFlow/Info.plist;
+				INFOPLIST_FILE = StateAndDataFlow/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
