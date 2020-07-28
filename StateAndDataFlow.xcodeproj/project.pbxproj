@@ -74,8 +74,6 @@
 		8CA10D8724D047470024EE54 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				A845607A24CF4F58005EF569 /* TimeCounter.swift */,
-				A845607E24CF56C7005EF569 /* UserManager.swift */,
 				A845606624CF47B7005EF569 /* AppDelegate.swift */,
 				A845606824CF47B7005EF569 /* SceneDelegate.swift */,
 				A845607424CF47BA005EF569 /* Info.plist */,
@@ -107,6 +105,8 @@
 				8CA10D8624D047280024EE54 /* Sourse */,
 				8CA10D8724D047470024EE54 /* SupportingFiles */,
 				A845606E24CF47BA005EF569 /* Preview Content */,
+				A845607E24CF56C7005EF569 /* UserManager.swift */,
+				A845607A24CF4F58005EF569 /* TimeCounter.swift */,
 			);
 			path = StateAndDataFlow;
 			sourceTree = "<group>";
