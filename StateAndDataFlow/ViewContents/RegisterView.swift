@@ -16,11 +16,17 @@ struct RegisterView: View {
         VStack {
             TextField("Enter your name...", text: $name)
                 .multilineTextAlignment(.center)
+                .frame(width: 200, height: 50)
+                .font(.headline)
             
             Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark.circle")
+                        .frame(width: 30, height: 30)
+                        .font(.headline)
                     Text("Ok")
+                        .frame(width: 30, height: 30)
+                        .font(.headline)
                 }
             }
         }
