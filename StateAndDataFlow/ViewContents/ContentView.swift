@@ -17,14 +17,17 @@ struct ContentView: View {
             Text("Hi, \(user.name)")
                 .font(.largeTitle)
                 .offset(x: 0, y: 100)
+            
             Text("\(timer.counter)")
                 .font(.largeTitle)
                 .offset(x: 0, y: 200)
+            
             Spacer()
             
             VStack {
                 ButtonView(timer: timer)
             }
+            
             Spacer()
             
             ButtonLogout(isRegister: $user.isRegister)

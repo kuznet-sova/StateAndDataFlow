@@ -12,7 +12,7 @@ struct RegisterView: View {
     @State private var name = ""
     @EnvironmentObject var user: UserManager
     
-    private var nameValidation: Int {
+    private var nameCount: Int {
         name.count
     }
     
@@ -23,9 +23,11 @@ struct RegisterView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: 200, height: 50)
                     .font(.headline)
-                Text("\(nameValidation)")
+                
+                Text("\(nameCount)")
                     .frame(width: 30, height: 30)
                     .font(.headline)
+//                    .foregroundColor()
             }
             
             Button(action: registerUser) {
@@ -33,6 +35,7 @@ struct RegisterView: View {
                     Image(systemName: "checkmark.circle")
                         .frame(width: 30, height: 30)
                         .font(.headline)
+                    
                     Text("Ok")
                         .frame(width: 30, height: 30)
                         .font(.headline)
@@ -48,6 +51,19 @@ extension RegisterView {
         if !name.isEmpty {
             user.name = name
             user.isRegister = true
+        }
+    }
+    
+    private func nameValidation() {
+        var nameCountColor: Color
+        var loginAction: Bool
+        
+        if nameCount < 3 {
+            nameCountColor = .red
+            loginAction = false
+        } else {
+            nameCountColor = .green
+            loginAction = true
         }
     }
 }
