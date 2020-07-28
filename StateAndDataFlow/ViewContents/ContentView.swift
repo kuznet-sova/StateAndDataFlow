@@ -27,7 +27,7 @@ struct ContentView: View {
             }
             Spacer()
             
-            ButtonLogout()
+            ButtonLogout(isRegister: $user.isRegister)
         }
     }
 }
@@ -62,10 +62,11 @@ struct ButtonView: View {
 }
 
 struct ButtonLogout: View {
+    @Binding var isRegister: Bool
     
     var body: some View {
         VStack {
-            Button(action: {  }) {
+            Button(action: { self.isRegister = false }) {
                 Text("LogOut")
                     .font(.title)
                     .fontWeight(.bold)
